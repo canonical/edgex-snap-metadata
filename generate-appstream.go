@@ -2,18 +2,16 @@ package main
 
 import (
 	"bufio"
+	"encoding/xml"
 	"flag"
 	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
-
-	"gopkg.in/yaml.v3"
 )
 
 func main() {
 	name := flag.String("name", "", "name of the snap")
-	icon := flag.Bool("default-icon", false, "whether the default icon should be included")
 	flag.Parse()
 
 	if *name == "" {
@@ -22,16 +20,14 @@ func main() {
 		os.Exit(1)
 	}
 
-	snapcraft := make(map[string]interface{})
-
-	templateFile, err := ioutil.ReadFile("template.yaml")
-	if err != nil {
-		log.Fatalln(err)
-	}
-
-	err = yaml.Unmarshal(templateFile, &snapcraft)
-	if err != nil {
-		log.Fatalf("error: %v", err)
+	var component struct {
+		XMLName     xml.Name `xml:"component"`
+		Summary     string   `xml:"summary"`
+		Description struct {
+			// use CDATA to make the value human-readable but
+			// not interpreted as XML markup
+			Body string `xml:",cdata"`
+		} `xml:"description"`
 	}
 
 	file, err := os.Open("metadata/" + *name + ".md")
@@ -56,7 +52,7 @@ func main() {
 			lineNum++
 			continue
 		} else {
-			// lines 2-end are the description
+			// lines 2 to EOF are the description
 			description += line + "\n"
 		}
 		lineNum++
@@ -68,14 +64,10 @@ func main() {
 	// fmt.Printf("Summary:\n%s\n\n", summary)
 	// fmt.Printf("Description:\n%s\n\n", description)
 
-	if !*icon {
-		delete(snapcraft, "icon")
-	}
-	snapcraft["name"] = name
-	snapcraft["summary"] = summary
-	snapcraft["description"] = description
+	component.Summary = summary
+	component.Description.Body = "\n" + description
 
-	output, err := yaml.Marshal(snapcraft)
+	output, err := xml.MarshalIndent(&component, "", "  ")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -88,7 +80,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	err = ioutil.WriteFile("snap/snapcraft.yaml", output, 0644)
+	err = ioutil.WriteFile(*name+".metainfo.xml", output, 0644)
 	if err != nil {
 		log.Fatal(err)
 	}
