@@ -86,12 +86,6 @@ func main() {
 
 	log.Printf("Output:\n%s\n\n", output)
 
-	// output = bytes.ReplaceAll(output, []byte("\n"), []byte("  \n"))
-	err = os.MkdirAll("snap", 0755)
-	if err != nil {
-		log.Fatal(err)
-	}
-
 	filename := strings.TrimSuffix(file.Name(), ".md") + appstreamExt
 	log.Printf("Writing output to %s", filename)
 	err = ioutil.WriteFile(filename, output, 0644)
