@@ -8,13 +8,16 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"strings"
 )
 
+const appstreamExt = ".metainfo.xml"
+
 func main() {
-	name := flag.String("name", "", "name of the snap")
+	input := flag.String("input", "", "path to md file")
 	flag.Parse()
 
-	if *name == "" {
+	if *input == "" {
 		fmt.Println("Missing input.\nUsage:")
 		flag.PrintDefaults()
 		os.Exit(1)
@@ -30,11 +33,13 @@ func main() {
 		} `xml:"description"`
 	}
 
-	file, err := os.Open("metadata/" + *name + ".md")
+	file, err := os.Open(*input)
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer file.Close()
+
+	log.Printf("Reading %s", file.Name())
 
 	scanner := bufio.NewScanner(file)
 	lineNum := 0
@@ -64,6 +69,13 @@ func main() {
 	// fmt.Printf("Summary:\n%s\n\n", summary)
 	// fmt.Printf("Description:\n%s\n\n", description)
 
+	if strings.TrimSpace(summary) == "" {
+		log.Fatal("Failed to extract summary")
+	}
+	if strings.TrimSpace(description) == "" {
+		log.Fatal("Failed to extract description")
+	}
+
 	component.Summary = summary
 	component.Description.Body = "\n" + description
 
@@ -72,7 +84,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Printf("%s\n\n", output)
+	log.Printf("Output:\n%s\n\n", output)
 
 	// output = bytes.ReplaceAll(output, []byte("\n"), []byte("  \n"))
 	err = os.MkdirAll("snap", 0755)
@@ -80,7 +92,9 @@ func main() {
 		log.Fatal(err)
 	}
 
-	err = ioutil.WriteFile(*name+".metainfo.xml", output, 0644)
+	filename := strings.TrimSuffix(file.Name(), ".md") + appstreamExt
+	log.Printf("Writing output to %s", filename)
+	err = ioutil.WriteFile(filename, output, 0644)
 	if err != nil {
 		log.Fatal(err)
 	}
