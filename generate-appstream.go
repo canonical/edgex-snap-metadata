@@ -27,13 +27,14 @@ import (
 	"strings"
 )
 
-const (
-	appstreamExt = ".metainfo.xml"
-	icon         = "https://github.com/farshidtz/edgex-snap-metadata/raw/appstream-icon/icon.png"
-)
+const appstreamExt = ".metainfo.xml"
 
 func main() {
 	input := flag.String("input", "", "path to md file")
+	iconURL := flag.String(
+		"icon-url",
+		"https://github.com/canonical/edgex-snap-metadata/raw/main/icon.png",
+		"URL of icon")
 	flag.Parse()
 
 	if *input == "" {
@@ -102,7 +103,7 @@ func main() {
 	component.Summary = summary
 	component.Description.Body = "\n" + description
 	component.Icon.Type = "remote"
-	component.Icon.Path = icon
+	component.Icon.Path = *iconURL
 
 	output, err := xml.MarshalIndent(&component, "", "  ")
 	if err != nil {
