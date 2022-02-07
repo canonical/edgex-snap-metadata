@@ -3,6 +3,8 @@ name: AppStream
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
@@ -32,10 +34,11 @@ jobs:
         path: |
           metadata/*.metainfo.xml
           commit.txt
-
+  
   stage:
     needs: build
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     steps:
     - name: Checkout appstream branch
       uses: actions/checkout@v2
