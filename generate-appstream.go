@@ -10,7 +10,7 @@ And outputs XML in the following format:
 	<description><![CDATA[
 	DESCRIPTION
 	]]></description>
-	<icon type="local">edgex-snap-icon.png</icon>
+	<icon type="local">hardcoded_relative_path</icon>
 	</component>
 */
 
