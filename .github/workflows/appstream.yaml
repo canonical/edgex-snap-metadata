@@ -2,7 +2,7 @@ name: AppStream
 
 on:
   push:
-    branches: [ main, feat-appstream ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
 
     - name: Generate appstream files
       run: |
-        for entry in "metadata"/*
+        for entry in "metadata"/*.md
         do
           go run generate-appstream.go --input="$entry"
         done
