@@ -35,18 +35,10 @@ Note that not all the above services are enabled and started by default.
 =============
 
 **Further Reading**
-
-Getting started with snaps (v2.1)  
-https://docs.edgexfoundry.org/2.1/getting-started/Ch-GettingStartedSnapUsers
-
-Snap usage instructions  
-https://github.com/edgexfoundry/edgex-go/blob/main/snap/README.md
-
-EdgeX documentation  
-https://docs.edgexfoundry.org
-
-Source code  
-https://github.com/edgexfoundry/edgex-go
+* Getting started with snaps (v2.1): https://docs.edgexfoundry.org/2.1/getting-started/Ch-GettingStartedSnapUsers
+* Snap usage instructions: https://github.com/edgexfoundry/edgex-go/blob/main/snap/README.md
+* EdgeX documentation: https://docs.edgexfoundry.org
+* Source code: https://github.com/edgexfoundry/edgex-go
 
 ====================
 

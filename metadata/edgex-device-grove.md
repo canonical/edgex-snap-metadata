@@ -7,11 +7,14 @@ This device service is expected to work on the following boards:
 * Raspberry Pi 3 or higher - arm64 OS
 * Raspberry Pi Zero 2 or higher - arm64 OS (untested)
 
-**Source code and more info**  
+**Source code and more info**
+
 https://github.com/edgexfoundry/device-grove-c
 
-**EdgeX documentation**  
+**EdgeX documentation**
+
 https://docs.edgexfoundry.org
 
-**Reference platform snap**  
+**Reference platform snap**
+
 https://snapcraft.io/edgexfoundry
