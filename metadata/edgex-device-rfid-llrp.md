@@ -1,3 +1,19 @@
-EdgeX Device LLRP Micro Service
+EdgeX Device RFID LLRP
 ---
-The EdgeX Device LLRP service for connecting LLRP based RFID devices to EdgeX. Initially the daemon in the snap is disabled - a device profile must be provisioned externally with core-metadata or provided to device-rfid-llrp-go inside "$SNAP_DATA/config/device-rfid-llrp-go/res" before starting.
+EdgeX Device RFID LLRP is a device service for communicating with LLRP-based RFID readers, configuring the readers and generating asynchronous EdgeX readings that contain LLRP ROAccessReport and Reader messages
+
+**Snap usage instructions**
+
+https://github.com/edgexfoundry/device-rfid-llrp-go/blob/main/snap/README.md
+
+**Source code and more info**
+
+https://github.com/edgexfoundry/device-rfid-llrp-go
+
+**EdgeX documentation**
+
+https://docs.edgexfoundry.org
+
+**Reference platform snap**
+
+https://snapcraft.io/edgexfoundry
