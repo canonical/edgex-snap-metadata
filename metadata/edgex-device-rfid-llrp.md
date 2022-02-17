@@ -1,6 +1,6 @@
 EdgeX Device RFID LLRP
 ---
-EdgeX Device RFID LLRP is a device service for communicating with LLRP-based RFID readers, configuring the readers and generating asynchronous EdgeX readings that contain LLRP ROAccessReport and Reader messages
+EdgeX Device RFID LLRP is a device service for communicating with LLRP-based RFID readers, configuring the readers and generating asynchronous EdgeX readings that contain LLRP ROAccessReport and Reader messages.
 
 **Snap usage instructions**
 
