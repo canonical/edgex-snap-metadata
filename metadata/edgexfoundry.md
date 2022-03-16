@@ -7,10 +7,11 @@ It provides the components to develop microservices responsible for data acquisi
 This snap is a part of EdgeX Foundry and contains the following reference services:
 
 **Core Services**
-* Core Data and Message Bus (Redis)
+* Core Data
 * Core Command
 * Core Metadata
 * Registry and Config (Consul)
+* Message Bus (Redis)
 
 **Supporting Services**
 * Rules Engine (eKuiper)
