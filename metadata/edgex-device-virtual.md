@@ -1,18 +1,11 @@
 EdgeX Device Virtual
 ---
-The EdgeX Device Virtual is a device service simulates different kinds of devices to generate events and readings into EdgeX. 
-This is useful when executing functional or performance tests without having any real devices.
-
-This service simulates the following data types:
-* Bool, BoolArray
-* Int8, Int16, Int32, Int64, Int8Array, Int16Array, Int32Array, Int64Array
-* Uint8, Uint16, Uint32, Uint64, Uint8Array, Uint16Array, Uint32Array, Uint64Array
-* Float32, Float64, Float32Array, Float64Array
-* Binary
+The EdgeX Device Virtual is a device service that simulates devices that generate synthetic readings in various data types and respond to commands.
+These are useful when demonstrating EdgeX or executing functional/performance tests without real devices.
 
 **Getting started**
 
-https://docs.edgexfoundry.org/2.2/getting-started/Ch-GettingStartedSnapUsers/
+https://docs.edgexfoundry.org/2.2/getting-started/Ch-GettingStartedSnapUsers/#device-virtual
 
 **EdgeX documentation**
 
