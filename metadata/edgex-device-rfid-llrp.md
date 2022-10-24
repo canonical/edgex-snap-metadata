@@ -4,13 +4,9 @@ EdgeX Device RFID LLRP is a device service for communicating with LLRP-based RFI
 
 For the application service for inventory management, see https://snapcraft.io/edgex-app-rfid-llrp-inventory
 
-**Snap usage instructions**
+**Getting started**
 
-https://github.com/edgexfoundry/device-rfid-llrp-go/blob/main/snap/README.md
-
-**Source code and more info**
-
-https://github.com/edgexfoundry/device-rfid-llrp-go
+https://docs.edgexfoundry.org/latest/getting-started/Ch-GettingStartedSnapUsers/#device-rfid-llrp
 
 **EdgeX documentation**
 
@@ -19,3 +15,7 @@ https://docs.edgexfoundry.org
 **Reference platform snap**
 
 https://snapcraft.io/edgexfoundry
+
+**Source code**
+
+https://github.com/edgexfoundry/device-rfid-llrp-go

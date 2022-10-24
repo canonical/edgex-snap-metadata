@@ -4,7 +4,7 @@ The EdgeX Device ONVIF Camera is a device service for controlling and communicat
 
 **Getting started**
 
-https://docs.edgexfoundry.org/2.3/getting-started/Ch-GettingStartedSnapUsers/#device-onvif-camera
+https://docs.edgexfoundry.org/latest/getting-started/Ch-GettingStartedSnapUsers/#device-onvif-camera
 
 **EdgeX documentation**
 
