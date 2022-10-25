@@ -10,6 +10,7 @@ This device service is expected to work on the following boards:
 **Getting started**
 
 https://docs.edgexfoundry.org/latest/getting-started/Ch-GettingStartedSnapUsers/#device-grove
+
 **EdgeX documentation**
 
 https://docs.edgexfoundry.org
