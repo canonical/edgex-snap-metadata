@@ -11,34 +11,30 @@ This snap is a part of EdgeX Foundry and contains the following reference servic
 * Core Data
 * Core Command
 * Core Metadata
-* Registry and Config (Consul)
+* Registry and Config Provider (Consul)
 * Message Bus (Redis)
 
 **Supporting Services**
-* Rules Engine (eKuiper)
+* Rules Engine (eKuiper) - Deprecated in favor of https://snapcraft.io/edgex-ekuiper
 * Scheduling
 * Alerts & Notifications
 
 **Application Services**
-* Configurable Application Service
+* Configurable Application Service (for Rules Engine event filtering) - Deprecated in favor of https://snapcraft.io/edgex-app-service-configurable
 
 **Security Services**
 * API Gateway a.k.a. Reverse Proxy (Kong)
 * Secret Store (Vault)
 
 **Management Services**
-* Management Service Agent (deprecated)
-
-**Device Services**
-* Virtual
+* Management Service Agent - Deprecated
 
 Note that not all the above services are enabled and started by default.
 
 =============
 
 **Further Reading**
-* Getting started with snaps (v2.1): https://docs.edgexfoundry.org/2.1/getting-started/Ch-GettingStartedSnapUsers
-* Snap usage instructions: https://github.com/edgexfoundry/edgex-go/blob/main/snap/README.md
+* Getting started with snaps: https://docs.edgexfoundry.org/latest/getting-started/Ch-GettingStartedSnapUsers
 * EdgeX documentation: https://docs.edgexfoundry.org
 * Source code: https://github.com/edgexfoundry/edgex-go
 
@@ -49,12 +45,19 @@ Note that not all the above services are enabled and started by default.
 * EdgeX CLI: https://snapcraft.io/edgex-cli
 
 **Other Supported EdgeX Snaps**
+* eKuiper: https://snapcraft.io/edgex-ekuiper
 * App Service Configurable: https://snapcraft.io/edgex-app-service-configurable
+* App RFID LLRP Inventory: https://snapcraft.io/edgex-app-rfid-llrp-inventory
 * Device Camera: https://snapcraft.io/edgex-device-camera
+* Device GPIO: https://snapcraft.io/edgex-device-gpio
 * Device Modbus: https://snapcraft.io/edgex-device-modbus
 * Device MQTT: https://snapcraft.io/edgex-device-mqtt
+* Device ONVIF Camera: https://snapcraft.io/edgex-device-onvif-camera
 * Device REST: https://snapcraft.io/edgex-device-rest
+* Device RFID LLRP: https://snapcraft.io/edgex-device-rfid-llrp
 * Device SNMP: https://snapcraft.io/edgex-device-snmp
+* Device USB Camera: https://snapcraft.io/edgex-device-usb-camera
+* Device Virtual: https://snapcraft.io/edgex-device-virtual
 * Device Grove: https://snapcraft.io/edgex-device-grove
 
 **Additional References**

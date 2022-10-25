@@ -7,13 +7,9 @@ EdgeX Device GPIO is a device service for connecting GPIO devices to EdgeX.
 * This device service uses sysfs ABI (default) or chardev ABI (experiment) to control GPIO devices For a connected GPIO device, update the configuration files, and then start to read or write data from GPIO device
 * This device service ONLY works on Linux system
 
-**Snap usage instructions**
+**Getting started**
 
-https://github.com/edgexfoundry/device-gpio/blob/main/snap/README.md
-
-**Source code and more info**
-
-https://github.com/edgexfoundry/device-gpio
+https://docs.edgexfoundry.org/latest/getting-started/Ch-GettingStartedSnapUsers/#device-gpio
 
 **EdgeX documentation**
 
@@ -22,6 +18,11 @@ https://docs.edgexfoundry.org
 **Reference platform snap**
 
 https://snapcraft.io/edgexfoundry
+
+**Source code**
+
+https://github.com/edgexfoundry/device-gpio
+
 ]]></description>
   <icon type="local">edgex-snap-icon.png</icon>
 </component>

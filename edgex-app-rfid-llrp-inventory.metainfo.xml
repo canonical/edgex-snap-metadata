@@ -5,13 +5,9 @@ EdgeX RFID LLRP Inventory Application Service is an application service that pro
 
 For the RFID LLRP device service, refer to https://snapcraft.io/edgex-device-rfid-llrp
 
-**Snap usage instructions**
+**Getting started**
 
-https://github.com/edgexfoundry/app-rfid-llrp-inventory/blob/main/snap/README.md
-
-**Source code and more info**
-
-https://github.com/edgexfoundry/app-rfid-llrp-inventory
+https://docs.edgexfoundry.org/latest/getting-started/Ch-GettingStartedSnapUsers/#app-rfid-llrp-inventory
 
 **EdgeX documentation**
 
@@ -20,6 +16,10 @@ https://docs.edgexfoundry.org
 **Reference platform snap**
 
 https://snapcraft.io/edgexfoundry
+
+**Source code**
+
+https://github.com/edgexfoundry/app-rfid-llrp-inventory
 ]]></description>
   <icon type="local">edgex-snap-icon.png</icon>
 </component>
