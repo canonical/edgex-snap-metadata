@@ -5,7 +5,7 @@ These are useful when demonstrating EdgeX or executing functional/performance te
 
 **Getting started**
 
-https://docs.edgexfoundry.org/2.2/getting-started/Ch-GettingStartedSnapUsers/#device-virtual
+https://docs.edgexfoundry.org/latest/getting-started/Ch-GettingStartedSnapUsers/#device-virtual
 
 **EdgeX documentation**
 

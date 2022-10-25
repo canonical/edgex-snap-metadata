@@ -9,7 +9,7 @@ This service provides the following capabilities:
 
 **Getting started**
 
-https://docs.edgexfoundry.org/2.3/getting-started/Ch-GettingStartedSnapUsers/#device-usb-camera
+https://docs.edgexfoundry.org/latest/getting-started/Ch-GettingStartedSnapUsers/#device-usb-camera
 
 **EdgeX documentation**
 
