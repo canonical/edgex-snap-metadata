@@ -14,12 +14,8 @@ This snap is a part of EdgeX Foundry and contains the following reference servic
 * Message Bus (Redis)
 
 **Supporting Services**
-* Rules Engine (eKuiper) - Deprecated in favor of https://snapcraft.io/edgex-ekuiper
 * Scheduling
 * Alerts & Notifications
-
-**Application Services**
-* Configurable Application Service (for Rules Engine event filtering) - Deprecated in favor of https://snapcraft.io/edgex-app-service-configurable
 
 **Security Services**
 * API Gateway a.k.a. Reverse Proxy (Kong)
